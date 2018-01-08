@@ -13,13 +13,13 @@
 #  updated_at  :datetime         not null
 #
 
-class Picture < ApplicationRecord
-  belongs_to :category
-
-  mount_uploader :image, ImageUploader
-
-  # Validations
-  validates :is_print, presence: true
-  validates :image, presence: true
-  validates :position, presence: true
+FactoryGirl.define do
+  factory :picture do
+    title 'wildFlower'
+    description 'wildFlower festival'
+    position Faker::Number.between(1, 10)
+    is_print Faker::Boolean.boolean
+    image
+    category
+  end
 end
