@@ -31,14 +31,15 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
+#gem 'devise' gem 'capistrano-rails', group: :development
+gem 'devise'
 # for image upload
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'                 # resizable image
 gem 'fog-aws'
 
 gem "faker"
+gem 'jwt'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -47,6 +48,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'capybara'
+  gem 'annotate'
 end
 
 group :development do
